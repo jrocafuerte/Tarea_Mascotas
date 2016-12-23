@@ -35,10 +35,39 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder holder, int position) {
+    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int position) {
         final Mascota mascota   = mascotas.get(position);
-        // contactoViewHolder.imgFoto.setImageResource(contact.getFoto());
+        mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
+        mascotaViewHolder.nombreMascota.setText(mascota.getNombre());
+        mascotaViewHolder.cantidadMegusta.setText(mascota.getMegusta());
 
+
+
+         /* contactoViewHolder.imgFoto.setImageResource(contact.getFoto());
+        contactoViewHolder.nombreContacto.setText(contact.getNombre());
+        contactoViewHolder.telefonoContacto.setText(contact.getTelefono());
+
+        contactoViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(activity , contact.getNombre(), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(activity, detalleContacto.class);
+                i.putExtra(activity.getResources().getString(R.string.pnombre),contact.getNombre());
+                i.putExtra(activity.getResources().getString(R.string.ptelefono),contact.getTelefono());
+                i.putExtra(activity.getResources().getString(R.string.pemail),contact.getEmail());
+                i.putExtra(activity.getResources().getString(R.string.pfoto),contact.getFoto());
+                activity.startActivity(i);
+
+            }
+        });
+
+        contactoViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity, "Diste Like a "+contact.getNombre(),Toast.LENGTH_SHORT).show();
+            }
+        }); */
     }
 
     @Override
@@ -47,6 +76,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
+
 
         private ImageView imgFoto;
         private TextView nombreMascota;

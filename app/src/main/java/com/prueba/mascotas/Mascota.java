@@ -10,6 +10,12 @@ public class Mascota {
     private int foto;
     private int megusta;
 
+    public Mascota(int megusta, String nombre, int foto) {
+        this.megusta = megusta;
+        this.nombre = nombre;
+        this.foto = foto;
+    }
+
     public String getNombre() {
         return nombre;
     }

@@ -1,6 +1,7 @@
 package com.prueba.mascotas;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,35 +41,18 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         final Mascota mascota   = mascotas.get(position);
         mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
         mascotaViewHolder.nombreMascota.setText(mascota.getNombre());
-        mascotaViewHolder.cantidadMegusta.setText(mascota.getMegusta());
+        mascotaViewHolder.cantidadMegusta.setText(String.valueOf(mascota.getMegusta()));
 
-
-
-         /* contactoViewHolder.imgFoto.setImageResource(contact.getFoto());
-        contactoViewHolder.nombreContacto.setText(contact.getNombre());
-        contactoViewHolder.telefonoContacto.setText(contact.getTelefono());
-
-        contactoViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
+        mascotaViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                Toast.makeText(activity , contact.getNombre(), Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(activity, detalleContacto.class);
-                i.putExtra(activity.getResources().getString(R.string.pnombre),contact.getNombre());
-                i.putExtra(activity.getResources().getString(R.string.ptelefono),contact.getTelefono());
-                i.putExtra(activity.getResources().getString(R.string.pemail),contact.getEmail());
-                i.putExtra(activity.getResources().getString(R.string.pfoto),contact.getFoto());
+            public void onClick(View v) {
+                Toast.makeText(activity , "Hola", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(activity , Mascotas_Favoritas.class);
                 activity.startActivity(i);
-
             }
         });
 
-        contactoViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(activity, "Diste Like a "+contact.getNombre(),Toast.LENGTH_SHORT).show();
-            }
-        }); */
+
     }
 
     @Override
@@ -76,7 +61,6 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
-
 
         private ImageView imgFoto;
         private TextView nombreMascota;

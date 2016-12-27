@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/mascotas_favoritas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.prueba.mascotas.MainActivity">
+    tools:context="com.prueba.mascotas.Mascotas_Favoritas">
 
     <include
         android:id="@+id/miActionBar"
         layout="@layout/action_bar" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvMascota"
+        android:id="@+id/rvMascotaFavorita"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/miActionBar">

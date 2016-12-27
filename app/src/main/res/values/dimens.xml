@@ -5,8 +5,11 @@
     <dimen name="corner_radius">4dp</dimen>
     <!-- Dimensiones de CardView para Mascotas -->
     <dimen name="tamano_letra_cardview">20dp</dimen>
-    <dimen name="margen_lnombre">70dp</dimen>
-    <dimen name="margen_lcantidad">100dp</dimen>
+    <dimen name="margen_lnombre">50dp</dimen>
+    <dimen name="margen_lcantidad">50dp</dimen>
     <dimen name="margen_limagen">20dp</dimen>
+    <dimen name="margen_top">10dp</dimen>
+    <!-- Action Bar -->
+    <dimen name="elevationActionBar">4dp</dimen>
 
 </resources>

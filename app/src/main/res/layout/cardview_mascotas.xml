@@ -3,7 +3,8 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
-    cardview:cardCornerRadius="@dimen/corner_radius">
+    cardview:cardCornerRadius="@dimen/corner_radius"
+    android:layout_marginTop="@dimen/margen_top">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                 android:layout_width="38dp"
                 android:layout_height="38dp"
                 android:background="@drawable/dog_bone_52"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="5dp"/>
 
             <TextView
                 android:id="@+id/tvNombreMascota"

@@ -56,7 +56,6 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             }
         });
 
-
     }
 
     @Override

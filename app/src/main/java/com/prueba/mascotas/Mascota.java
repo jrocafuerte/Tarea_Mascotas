@@ -8,12 +8,22 @@ public class Mascota {
 
     private String nombre;
     private int foto;
+    private int fotolike;
     private int megusta;
 
-    public Mascota(int megusta, String nombre, int foto) {
+    public Mascota(int megusta, String nombre, int foto, int fotlike) {
         this.megusta = megusta;
         this.nombre = nombre;
         this.foto = foto;
+        this.fotolike = fotolike;
+    }
+
+    public int getFotolike() {
+        return fotolike;
+    }
+
+    public void setFotolike(int fotolike) {
+        this.fotolike = fotolike;
     }
 
     public String getNombre() {

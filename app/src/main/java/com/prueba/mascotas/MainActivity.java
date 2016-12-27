@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void inicializarLista(){
         mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota(5,"Mascota 1",R.drawable.img1));
-        mascotas.add(new Mascota(2,"Mascota 2",R.drawable.img2));
-        mascotas.add(new Mascota(10,"Mascota 3",R.drawable.img3));
-        mascotas.add(new Mascota(4,"Mascota 4",R.drawable.img4));
-        mascotas.add(new Mascota(6,"Mascota 5",R.drawable.img5));
+        mascotas.add(new Mascota(5,"Mascota 1",R.drawable.img1,R.drawable.dog_bone_50));
+        mascotas.add(new Mascota(2,"Mascota 2",R.drawable.img2,R.drawable.dog_bone_50));
+        mascotas.add(new Mascota(10,"Mascota 3",R.drawable.img3,R.drawable.dog_bone_50));
+        mascotas.add(new Mascota(4,"Mascota 4",R.drawable.img4,R.drawable.dog_bone_50));
+        mascotas.add(new Mascota(6,"Mascota 5",R.drawable.img5,R.drawable.dog_bone_50));
 
     }
 

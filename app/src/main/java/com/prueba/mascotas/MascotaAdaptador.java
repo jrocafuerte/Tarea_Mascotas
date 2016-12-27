@@ -3,6 +3,7 @@ package com.prueba.mascotas;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -37,18 +40,19 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int position) {
+    public void onBindViewHolder(final MascotaViewHolder mascotaViewHolder, int position) {
+        final int pos = position;
         final Mascota mascota   = mascotas.get(position);
         mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
         mascotaViewHolder.nombreMascota.setText(mascota.getNombre());
         mascotaViewHolder.cantidadMegusta.setText(String.valueOf(mascota.getMegusta()));
 
-        mascotaViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
+        mascotaViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(activity , "Hola", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(activity , Mascotas_Favoritas.class);
-                activity.startActivity(i);
+                String cadena = (String) mascotaViewHolder.cantidadMegusta.getText();
+                int cantidad = Integer.parseInt(cadena)+1;
+                mascotaViewHolder.cantidadMegusta.setText(String.valueOf(cantidad));
             }
         });
 
